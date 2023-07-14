@@ -27,6 +27,9 @@ void render() {
     framebuffer.setCurrentColor(Color(255, 255, 255)); // Establecer color blanco para la orilla
     Poligono::drawPoligono(vertices1, sizeof(vertices1) / sizeof(vertices1[0]), framebuffer);
 
+    framebuffer.setCurrentColor(Color(255, 255, 0)); // Establecer color amarillo para el relleno del polígono
+    Relleno::fillPolygon(vertices1, sizeof(vertices1) / sizeof(vertices1[0]), framebuffer);
+
     // Polígono 2
     Point::Vertex2 vertices2[] = {
             {321, 335},
@@ -38,6 +41,9 @@ void render() {
     framebuffer.setCurrentColor(Color(255, 255, 255)); // Establecer color blanco para la orilla
     Poligono::drawPoligono(vertices2, sizeof(vertices2) / sizeof(vertices2[0]), framebuffer);
 
+    framebuffer.setCurrentColor(Color(0, 0, 255)); // Establecer color azul para el relleno del polígono
+    Relleno::fillPolygon(vertices2, sizeof(vertices2) / sizeof(vertices2[0]), framebuffer);
+
     // Polígono 3
     Point::Vertex2 vertices3[] = {
             {377, 249},
@@ -47,6 +53,9 @@ void render() {
 
     framebuffer.setCurrentColor(Color(255, 255, 255)); // Establecer color blanco para la orilla
     Poligono::drawPoligono(vertices3, sizeof(vertices3) / sizeof(vertices3[0]), framebuffer);
+
+    framebuffer.setCurrentColor(Color(255, 0, 0)); // Establecer color rojo para el relleno del polígono
+    Relleno::fillPolygon(vertices3, sizeof(vertices3) / sizeof(vertices3[0]), framebuffer);
 
     // Polígono 4
     Point::Vertex2 vertices4[] = {
@@ -73,6 +82,9 @@ void render() {
     framebuffer.setCurrentColor(Color(255, 255, 255)); // Establecer color blanco para la orilla
     Poligono::drawPoligono(vertices4, sizeof(vertices4) / sizeof(vertices4[0]), framebuffer);
 
+    framebuffer.setCurrentColor(Color(0, 255, 0)); // Establecer color verde para el relleno del polígono
+    Relleno::fillPolygon(vertices4, sizeof(vertices4) / sizeof(vertices4[0]), framebuffer);
+
     // Polígono 5
     Point::Vertex2 vertices5[] = {
             {682, 175},
@@ -83,6 +95,9 @@ void render() {
 
     framebuffer.setCurrentColor(Color(255, 255, 255)); // Establecer color blanco para la orilla
     Poligono::drawPoligono(vertices5, sizeof(vertices5) / sizeof(vertices5[0]), framebuffer);
+
+    framebuffer.setCurrentColor(Color(0, 0, 0)); // Establecer color negro para el relleno del polígono
+    Relleno::fillPolygon(vertices5, sizeof(vertices5) / sizeof(vertices5[0]), framebuffer);
 
     framebuffer.renderBuffer(); // Generar el archivo BMP
 }

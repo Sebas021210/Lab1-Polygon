@@ -85,7 +85,7 @@ void Framebuffer::renderBuffer() {
     file.write(bmpInfoHeader, 40);
 
     // Escribir los píxeles en el archivo BMP
-    for (int y = height - 1; y >= 0; --y) {
+    for (int y = 0; y < height; y++) {
         for (int x = 0; x < width; ++x) {
             int index = y * width + x;
             Color pixelColor = framebuffer[index];
