@@ -3,4 +3,4 @@ project(Lab1)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Lab1 main.cpp Color.h Framebuffer.h Point.h Linea.h Poligono.h)
+add_executable(Lab1 main.cpp Color.h Framebuffer.h Point.h Linea.h Poligono.h Relleno.h)
