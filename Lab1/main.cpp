@@ -30,6 +30,20 @@ void render() {
     framebuffer.setCurrentColor(Color(255, 255, 0)); // Establecer color amarillo para el relleno del polígono
     Relleno::fillPolygon(vertices1, sizeof(vertices1) / sizeof(vertices1[0]), framebuffer);
 
+    // Polígono 2
+    Point::Vertex2 vertices2[] = {
+            {321, 335},
+            {288, 286},
+            {339, 251},
+            {374, 302}
+    };
+
+    framebuffer.setCurrentColor(Color(255, 255, 255)); // Establecer color blanco para la orilla
+    Poligono::drawPoligono(vertices2, sizeof(vertices2) / sizeof(vertices2[0]), framebuffer);
+
+    framebuffer.setCurrentColor(Color(0, 0, 255)); // Establecer color azul para el relleno del polígono
+    Relleno::fillPolygon(vertices2, sizeof(vertices2) / sizeof(vertices2[0]), framebuffer);
+
     framebuffer.renderBuffer(); // Generar el archivo BMP
 }
 
