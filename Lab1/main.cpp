@@ -10,53 +10,6 @@ void render() {
     Framebuffer framebuffer(800, 600, Color(0, 0, 0)); // Crear instancia de Framebuffer con ancho, alto y color de borrado
     framebuffer.setCurrentColor(Color(255, 255, 255)); // Establecer color actual para los puntos y líneas
 
-    // Polígono 1
-    Point::Vertex2 vertices1[] = {
-            {165, 380},
-            {185, 360},
-            {180, 330},
-            {207, 345},
-            {233, 330},
-            {230, 360},
-            {250, 380},
-            {220, 385},
-            {205, 410},
-            {193, 383}
-    };
-
-    framebuffer.setCurrentColor(Color(255, 255, 255)); // Establecer color blanco para la orilla
-    Poligono::drawPoligono(vertices1, sizeof(vertices1) / sizeof(vertices1[0]), framebuffer);
-
-    framebuffer.setCurrentColor(Color(255, 255, 0)); // Establecer color amarillo para el relleno del polígono
-    Relleno::fillPolygon(vertices1, sizeof(vertices1) / sizeof(vertices1[0]), framebuffer);
-
-    // Polígono 2
-    Point::Vertex2 vertices2[] = {
-            {321, 335},
-            {288, 286},
-            {339, 251},
-            {374, 302}
-    };
-
-    framebuffer.setCurrentColor(Color(255, 255, 255)); // Establecer color blanco para la orilla
-    Poligono::drawPoligono(vertices2, sizeof(vertices2) / sizeof(vertices2[0]), framebuffer);
-
-    framebuffer.setCurrentColor(Color(0, 0, 255)); // Establecer color azul para el relleno del polígono
-    Relleno::fillPolygon(vertices2, sizeof(vertices2) / sizeof(vertices2[0]), framebuffer);
-
-    // Polígono 3
-    Point::Vertex2 vertices3[] = {
-            {377, 249},
-            {411, 197},
-            {436, 249}
-    };
-
-    framebuffer.setCurrentColor(Color(255, 255, 255)); // Establecer color blanco para la orilla
-    Poligono::drawPoligono(vertices3, sizeof(vertices3) / sizeof(vertices3[0]), framebuffer);
-
-    framebuffer.setCurrentColor(Color(255, 0, 0)); // Establecer color rojo para el relleno del polígono
-    Relleno::fillPolygon(vertices3, sizeof(vertices3) / sizeof(vertices3[0]), framebuffer);
-
     // Polígono 4
     Point::Vertex2 vertices4[] = {
             {413, 177},
